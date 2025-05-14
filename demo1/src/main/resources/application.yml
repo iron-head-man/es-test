@@ -1,0 +1,15 @@
+# application.yml 示例
+dubbo:
+  application:
+    name: provider # 替换为你的服务名
+  registry:
+    address: zookeeper://81.68.154.99:2181
+  provider:
+    timeout: 300000 # 替换为Zookeeper的实际地址
+  consumer:
+    timeout: 300000
+  protocol:
+    name: dubbo
+    port: 20880 # 可以根据需求调整端口
+  scan:
+    base-packages: com.example.demo.aa # 扫描包含@DubboService注解的包
